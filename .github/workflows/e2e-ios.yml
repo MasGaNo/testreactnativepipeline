@@ -55,9 +55,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ios/build
-          key: ${{ runner.os }}-detox-build
+          key: ${{ runner.os }}-detox-build-ios-sim
           restore-keys: |
-            ${{ runner.os }}-detox-build
+            ${{ runner.os }}-detox-build-ios-sim
 
       - name: Detox build
         run: yarn detox build --configuration ios.sim.release

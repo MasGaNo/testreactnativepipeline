@@ -34,9 +34,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: android/app/build
-          key: ${{ runner.os }}-detox-build
+          key: ${{ runner.os }}-detox-build-android-emu
           restore-keys: |
-            ${{ runner.os }}-detox-build
+            ${{ runner.os }}-detox-build-android-emu
 
       - name: Detox build
         run: yarn detox build --configuration android.emu.release
@@ -59,4 +59,3 @@ jobs:
         with:
           name: detox-artifacts
           path: artifacts
-          
