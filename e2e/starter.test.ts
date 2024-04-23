@@ -1,11 +1,5 @@
 import {expect} from 'detox';
 
-async function sleep(delayMs: number) {
-  return new Promise(resolve => {
-    setTimeout(resolve, delayMs);
-  });
-}
-
 describe('Example', () => {
   beforeAll(async () => {
     await device.launchApp();
